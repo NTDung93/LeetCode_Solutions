@@ -9,6 +9,8 @@ public:
         
         for(int i=0; i<nums.size(); i++){
             if((target - nums[i]) != map.end()){
+            	// != means that (target - nums[i]) matches a key value before the map ends.
+            	// == means that (target - nums[i]) do not match any keys, and let the map ends.
                 result[0] = i;
                 result[1] = map[target - nums[i]];
             }else{
